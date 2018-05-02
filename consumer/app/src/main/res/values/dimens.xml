@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--DP's-->
+    <dimen name="dp_10">10dp</dimen>
+
+    <!--SP's-->
+    <dimen name="smallText_sp_12">12sp</dimen>
+    <dimen name="normalText_sp_14">14sp</dimen>
+    <dimen name="subHeader_sp_16">16sp</dimen>
+
+    <dimen name="button_height">56dip</dimen>
+    <dimen name="button_marginLeft">60dip</dimen>
+    <dimen name="button_marginRight">60dip</dimen>
+    <dimen name="button_marginTop">30dip</dimen>
+    <dimen name="button_marginBottom">30dip</dimen>
+</resources>

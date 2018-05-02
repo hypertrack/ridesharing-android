@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hypertrack_key">HYPERTRACK_PUBLISHABLE_KEY</string>
+
+    <!-- for DirectionsApi use Server key and not (restricted) Android key -->
+    <!--Server key (auto created by Google Service) -->
+    <string name="google_api_server_key">GOOGLE_API_CONSOLE_SERVER_KEY</string>
+</resources>

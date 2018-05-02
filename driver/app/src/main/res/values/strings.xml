@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">DriverApp</string>
+
+    <string name="network_error">Opps! No internet connection... </string>
+    <string name="enable_location_settings">Please provide location permission </string>
+
+    <string name="login">login</string>
+    <string name="hypertrack">HyperTrack</string>
+    <string name="login_header">Uber for X</string>
+    <string name="cta_text_finding_riders_near_you">Finding riders near you</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept_ride">Accept ride</string>
+    <string name="start_ride">Start ride</string>
+    <string name="end_ride">End ride</string>
+    <string name="get_directions">GET DIRECTIONS</string>
+    <string name="location_permission_denied_error">Please provide Location Permission for functioning of DriverApp</string>
+    <string name="no_ride_found">No ride/s found</string>
+    <string name="find_new_rides">FIND NEW RIDES</string>d
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_phone">Enter your mobile number</string>
+    <string name="hint_vehicle">Enter your vehicle type</string>
+    <string name="hint_vehicle_no">Enter your vehicle registration number</string>
+    <string name="submit">Submit</string>
+    <string name="fetching_profile_details">Fetching your saved profile details</string>
+    <string name="update_profile_details">Edit/ update profile details</string>
+    <string name="no_data">--</string>
+</resources>

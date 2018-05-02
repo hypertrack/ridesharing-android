@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:progress="25"
+        android:progressBackgroundTint="@color/white"
+        android:progressTint="@color/sea_green_color"
+        android:indeterminateTint="@color/sea_green_color"
+        android:indeterminateOnly="true"
+        android:indeterminate="true"
+        />
+
+    <TextView
+        style="@style/tv_normal"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/grey_user_panel_text"
+        android:text="@string/find_driver"/>
+
+</LinearLayout>

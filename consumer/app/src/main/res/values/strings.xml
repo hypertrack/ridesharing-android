@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ConsumerApp</string>
+
+    <string name="network_error">Opps! No internet connection... </string>
+    <string name="enable_location_settings">Please provide location permission </string>
+
+    <string name="login">login</string>
+    <string name="hypertrack">HyperTrack</string>
+    <string name="login_header">Uber for X</string>
+    <string name="location_permission_denied_error">Please provide Location Permission for functioning of ConsumerApp</string>
+
+    <string name="book_ride">BOOK RIDE</string>
+    <string name="book_another_ride">BOOK ANOTHER RIDE</string>
+    <string name="find_driver">Connecting you to nearest driver</string>
+    <string name="amount">$%1$s</string>
+    <string name="estimated_fare">Estimated Fare</string>
+    <string name="share_trip">Share Trip</string>
+
+    <string name="hint_name">Enter your name</string>
+    <string name="hint_phone">Enter your mobile number</string>
+    <string name="submit">Submit</string>
+    <string name="select_place_title">Where do you wanna go?</string>
+    <string name="fetching_profile_details">Fetching your saved profile details</string>
+    <string name="update_profile_details">Edit/ update profile details</string>
+    <string name="no_data">--</string>
+    <string name="enter_pickup_location">Enter your pickup location</string>
+    <string name="no_cars_available">No cars available</string>
+</resources>

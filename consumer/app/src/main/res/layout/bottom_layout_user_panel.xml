@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_layout_user_panel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_cornered"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/tv_address_title"
+        style="@style/tv_normal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/iv_logo"
+        android:background="@color/white"
+        android:lineSpacingMultiplier="1.17"
+        android:paddingTop="10dp"
+        android:text="pickup"
+        android:textAllCaps="true"
+        android:textColor="@color/grey_user_panel_text"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_address_details"
+        style="@style/tv_normal"
+        android:layout_below="@+id/tv_address_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:lineSpacingMultiplier="1.14"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:paddingBottom="10dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ll_user_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_address_details"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <com.hypertrack.lib.internal.consumer.utils.HTCircleImageView
+            android:id="@+id/iv_user_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_avatar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_cta"
+            android:layout_toRightOf="@id/iv_user_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/tv_header" />
+
+            <TextView
+                android:id="@+id/tv_vehicle_details"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:textColor="@color/grey_user_panel_text" />
+        </LinearLayout>
+
+        <!--call to action-->
+        <TextView
+            android:id="@+id/tv_cta"
+            style="@style/tv_normal"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/ic_call"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
