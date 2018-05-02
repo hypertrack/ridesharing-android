@@ -3,56 +3,50 @@
 This open source repo/s uses HyperTrack SDK for developing real world Uber-like consumer-driver apps.
 
  - `UberX Consumer app` can be used by customers to :
- 
+
       - Login customer using Firebase phone-number authentication
       - Show cars availability near customer's current location
       - Show estimated fare and route for selected pickup and dropoff location
       - Book a ride from desired pickup and dropoff location
       - Track UberX driver to customer's pickup location
-      - Track the ongoing ride 
+      - Track the ongoing ride
       - Share ride details with friends.
       - Show trip summary.
-      
+
 - `UberX Driver app` will be used by driver/s to :
 
      - Login driver using Firebase phone-number authentication
-     - Find new rides 
-     - Accept a ride 
+     - Find new rides
+     - Accept a ride
      - Track and navigate till customer's pickup location
      - Track and navigate from customer's pickup to dropoff location
      - Show trip summary.
-      
-     
+
+
 ## How to Begin
 
-#####1. Get your keys
+###### 1. Get your keys
  - [Signup](https://www.hypertrack.com/signup?utm_source=github&utm_campaign=uber_for_x_android) to get your [HyperTrack API keys](https://dashboard.hypertrack.com/settings)
  - Get the [Google Maps API key](https://developers.google.com/maps/documentation/android-api/signup)
 
-#####2. Set up driver app
- - [Clone](https://github.com/hypertrack/uberx_android_driver.git) the driver app
- - Add the publishable key in DriverApp.java
- - Add your Google Maps key to google-maps-api.xml in your repo. 
+###### 2. Set up consumer & driver app
+ - [Clone](https://github.com/hypertrack/uberx_android.git) the consumer & driver apps
+ - Add the publishable key in DriverApp.java in Driver project and in ConsumerApp.java in Consumer project
+ - Add your Google Maps key to google-maps-api.xml in your individual repo.
    Make sure you replace API keys in all environments (debug/release)
 
-#####3. Set up consumer app
- - [Clone](https://github.com/hypertrack/uberx_android_consumer.git) the consumer app
- - Add the publishable key in ConsumerApp.java
- - Add your Google Maps key to google-maps-api.xml in your repo. 
-   Make sure you replace API keys in all environments (debug/release)
-
-#####4. Set up FCM backend
+###### 3. Set up FCM backend
 The HyperTrack SDK requires FCM for a battery efficient real-time tracking experience.
  - Setup your account on [Firebase console](https://console.firebase.google.com/) and get your FCM keys
  - Refer to the [FCM Integration guide](https://docs.hypertrack.com/sdks/android/gcm-integration.html#locate-your-gcmfcm-key).
  - After setting up your account on the [Firebase console](https://console.firebase.google.com), you will need to add the [google-services.json](https://support.google.com/firebase/answer/7015592) file to your app folder.
  - Add your FCM keys to [HyperTrack dashboard](https://dashboard.hypertrack.com/settings).
- 
-#####5. Firebase Realtime Database.
+
+###### 4. Firebase Realtime Database.
  - You can replace the logic with your sample apps.
  - Firebase Realtime Database is used for server communication only
  - Firebase Realtime Database is not required to use HyperTrack SDK
- - To setup Firebase Realtime database via Android studio, 
+ - To setup Firebase Realtime database via Android studio,
  - Goto: Android Studio --> Tools --> Firebase --> Realtime Database
 
 
