@@ -28,6 +28,13 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
      
 [![Uber-for-X Driver App](http://res.cloudinary.com/hypertrack/image/upload/v1525329669/driver.png)](https://www.youtube.com/watch?v=3R9GDQitt40)
 
+<p align="center">
+ <a href="https://www.youtube.com/watch?v=3R9GDQitt40">
+  <img src="http://res.cloudinary.com/hypertrack/image/upload/v1525329669/driver.png" width="330"/>
+ </a>
+</p>
+
+
 ## How to Begin
 
 ### 1. Get your keys
