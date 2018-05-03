@@ -15,7 +15,11 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
       - Let customers share live trip with friends and family
       - Show trip summary with distance travelled
       
-[![Uber-for-X Consumer App](https://img.youtube.com/vi/1qMFP5w32GY/0.jpg)](https://www.youtube.com/watch?v=1qMFP5w32GY)
+<p align="center">
+ <a href="https://www.youtube.com/watch?v=1qMFP5w32GY">
+  <img src="http://res.cloudinary.com/hypertrack/image/upload/v1525329669/customer.png" width="300"/>
+ </a>
+</p>
 
 
 - **Uber-for-X Driver app** can be used by driver to :
@@ -26,11 +30,9 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
      - Track and navigate from customer's pickup to dropoff location, and mark the dropoff as complete
      - Show trip summary with distance travelled
      
-[![Uber-for-X Driver App](http://res.cloudinary.com/hypertrack/image/upload/v1525329669/driver.png)](https://www.youtube.com/watch?v=3R9GDQitt40)
-
 <p align="center">
  <a href="https://www.youtube.com/watch?v=3R9GDQitt40">
-  <img src="http://res.cloudinary.com/hypertrack/image/upload/v1525329669/driver.png" width="330"/>
+  <img src="http://res.cloudinary.com/hypertrack/image/upload/v1525329669/driver.png" width="300"/>
  </a>
 </p>
 
