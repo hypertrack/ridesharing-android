@@ -53,7 +53,7 @@ The HyperTrack SDK requires FCM for a battery efficient real-time tracking exper
 
 
 ## Release to PlayStore
-To release the app on the Play Store, you will have to change the app's package name.
+To release the apps on the Play Store, you will have to change the apps' package names.
 
 1. Change the package name in AndroidManifest.xml file.
 
@@ -71,12 +71,12 @@ To release the app on the Play Store, you will have to change the app's package 
 4. Check for pojos/ models mentioned in proguard-rules.pro
 
 ## Documentation
-For detailed documentation of the APIs, customizations and what all you can build using HyperTrack, please visit the official [docs](https://docs.hypertrack.com/).
+For detailed documentation of the APIs, customizations and what all you can build using HyperTrack, please visit the official [docs](https://www.hypertrack.com/docs).
 
 ## Contribute
-Feel free to clone, use, and contribute back via [pull requests](https://help.github.com/articles/about-pull-requests/). We'd love to see your pull requests - send them in! Please use the [issues tracker](https://github.com/hypertrack/hypertrack-live-android/issues) to raise bug reports and feature requests.
+Feel free to clone, use, and contribute back via [pull requests](https://help.github.com/articles/about-pull-requests/). We'd love to see your pull requests - send them in! Please use the [issues tracker](https://github.com/hypertrack/uberx-android/issues) to raise bug reports and feature requests.
 
-We are excited to see what live location feature you build in your app using this project. Do ping us at help@hypertrack.io once you build one, and we would love to feature your app on our blog!
+We are excited to see what live location feature you build in your app using this project. Do ping us at help@hypertrack.com once you build one, and we would love to feature your app on our blog!
 
 ## Support
 Join our [Slack community](http://slack.hypertrack.com) for instant responses, or interact with our growing [community](https://community.hypertrack.com). You can also email us at help@hypertrack.com.
