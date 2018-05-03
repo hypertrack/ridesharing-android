@@ -1,48 +1,47 @@
-# UberX Android apps using HyperTrack SDK
+# Uber-for-X driver & customer apps using HyperTrack SDK
 
-This open source repo/s uses HyperTrack SDK for developing real world Uber-like consumer-driver apps.
+Uber’s business model has given rise to a large number of Uber-for-X services. Among other things, X equals moving, parking, courier, groceries, flowers, alcohol, dog walks, massages, dry cleaning, vets, medicines, car washes, roadside assistance and marijuana. Through these on-demand platforms, supply and demand are aggregated online for services to be fulfilled offline.
 
- - `UberX Consumer app` can be used by customers to :
+This open source repo/s uses HyperTrack SDK for developing real world Uber-like consumer & driver apps. 
 
-      - Login customer using Firebase phone-number authentication
-      - Show cars availability near customer's current location
+ - **Uber-for-X Consumer app** can be used by customer to :
+      - Login/signup customer using Firebase phone-number authentication
+      - Show available cars near customer's current location
+      - Allow customer to select pickup and dropoff location
       - Show estimated fare and route for selected pickup and dropoff location
       - Book a ride from desired pickup and dropoff location
-      - Track UberX driver to customer's pickup location
-      - Track the ongoing ride
-      - Share ride details with friends.
-      - Show trip summary.
+      - Track driver to customer's pickup location
+      - Track the ongoing ride to dropoff location
+      - Let customers share live trip with friends and family
+      - Show trip summary with distance travelled
 
-- `UberX Driver app` will be used by driver/s to :
-
-     - Login driver using Firebase phone-number authentication
+- **Uber-for-X Driver app** can be used by driver to :
+     - Login/signup driver using Firebase phone-number authentication
      - Find new rides
      - Accept a ride
-     - Track and navigate till customer's pickup location
-     - Track and navigate from customer's pickup to dropoff location
-     - Show trip summary.
-
+     - Track and navigate till customer's pickup location, and mark the pickup as complete
+     - Track and navigate from customer's pickup to dropoff location, and mark the dropoff as complete
+     - Show trip summary with distance travelled
 
 ## How to Begin
 
-###### 1. Get your keys
+### 1. Get your keys
  - [Signup](https://www.hypertrack.com/signup?utm_source=github&utm_campaign=uber_for_x_android) to get your [HyperTrack API keys](https://dashboard.hypertrack.com/settings)
  - Get the [Google Maps API key](https://developers.google.com/maps/documentation/android-api/signup)
 
-###### 2. Set up consumer & driver app
+### 2. Set up consumer & driver app
  - [Clone](https://github.com/hypertrack/uberx_android.git) the consumer & driver apps
  - Add the publishable key in DriverApp.java in Driver project and in ConsumerApp.java in Consumer project
- - Add your Google Maps key to google-maps-api.xml in your individual repo.
-   Make sure you replace API keys in all environments (debug/release)
+ - Add your Google Maps key to google-maps-api.xml in each of your individual repos. Make sure you replace API keys in all environments (debug/release)
 
-###### 3. Set up FCM backend
+### 3. Set up FCM backend
 The HyperTrack SDK requires FCM for a battery efficient real-time tracking experience.
  - Setup your account on [Firebase console](https://console.firebase.google.com/) and get your FCM keys
  - Refer to the [FCM Integration guide](https://docs.hypertrack.com/sdks/android/gcm-integration.html#locate-your-gcmfcm-key).
  - After setting up your account on the [Firebase console](https://console.firebase.google.com), you will need to add the [google-services.json](https://support.google.com/firebase/answer/7015592) file to your app folder.
  - Add your FCM keys to [HyperTrack dashboard](https://dashboard.hypertrack.com/settings).
 
-###### 4. Firebase Realtime Database.
+### 4. Firebase Realtime Database.
  - You can replace the logic with your sample apps.
  - Firebase Realtime Database is used for server communication only
  - Firebase Realtime Database is not required to use HyperTrack SDK
