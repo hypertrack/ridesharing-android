@@ -25,6 +25,7 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
      - Track and navigate till customer's pickup location, and mark the pickup as complete
      - Track and navigate from customer's pickup to dropoff location, and mark the dropoff as complete
      - Show trip summary with distance travelled
+     
 [![Uber-for-X Driver App](http://res.cloudinary.com/hypertrack/image/upload/v1525329669/driver.png)](https://www.youtube.com/watch?v=3R9GDQitt40)
 
 ## How to Begin
