@@ -46,11 +46,8 @@ The HyperTrack SDK requires FCM for a battery efficient real-time tracking exper
  - Add your FCM keys to [HyperTrack dashboard](https://dashboard.hypertrack.com/settings)
 
 ### 4. Set up Firebase Realtime Database
- - You can replace the logic with your sample apps
- - Firebase Realtime Database is used for server communication only
- - Firebase Realtime Database is not required to use HyperTrack SDK
- - To setup Firebase Realtime database via Android studio, go to: Android Studio --> Tools --> Firebase --> Realtime Database
-
+ - Firebase Realtime Database is used for server communication only. Firebase Realtime Database is _not required_ to use HyperTrack SDK. 
+ - To setup Firebase Realtime Database via Android studio, go to: Android Studio --> Tools --> Firebase --> Realtime Database
 
 ## Release to PlayStore
 To release the apps on the Play Store, you will have to change the apps' package names.
