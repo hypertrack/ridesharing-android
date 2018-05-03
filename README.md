@@ -17,8 +17,6 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
       
 [![Uber-for-X Driver App](https://img.youtube.com/vi/3R9GDQitt40/0.jpg)](https://www.youtube.com/watch?v=3R9GDQitt40)
 
-<iframe width="300" height="533" src="https://www.youtube.com/embed/3R9GDQitt40" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 - **Uber-for-X Driver app** can be used by driver to :
      - Login/signup driver using Firebase phone-number authentication
      - Find new rides
@@ -26,6 +24,8 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
      - Track and navigate till customer's pickup location, and mark the pickup as complete
      - Track and navigate from customer's pickup to dropoff location, and mark the dropoff as complete
      - Show trip summary with distance travelled
+
+[![Uber-for-X Consumer App](https://img.youtube.com/vi/1qMFP5w32GY/0.jpg)](https://www.youtube.com/watch?v=1qMFP5w32GY)
 
 ## How to Begin
 
@@ -38,19 +38,18 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
  - Add the publishable key in DriverApp.java in Driver project and in ConsumerApp.java in Consumer project
  - Add your Google Maps key to google-maps-api.xml in each of your individual repos. Make sure you replace API keys in all environments (debug/release)
 
-### 3. Set up FCM backend
-The HyperTrack SDK requires FCM for a battery efficient real-time tracking experience.
+### 3. Set up FCM
+The HyperTrack SDK requires FCM for a battery efficient real-time tracking experience
  - Setup your account on [Firebase console](https://console.firebase.google.com/) and get your FCM keys
- - Refer to the [FCM Integration guide](https://docs.hypertrack.com/sdks/android/gcm-integration.html#locate-your-gcmfcm-key).
- - After setting up your account on the [Firebase console](https://console.firebase.google.com), you will need to add the [google-services.json](https://support.google.com/firebase/answer/7015592) file to your app folder.
- - Add your FCM keys to [HyperTrack dashboard](https://dashboard.hypertrack.com/settings).
+ - Refer to the [FCM Integration guide](https://docs.hypertrack.com/sdks/android/gcm-integration.html#locate-your-gcmfcm-key)
+ - After setting up your account on the [Firebase console](https://console.firebase.google.com), add the [google-services.json](https://support.google.com/firebase/answer/7015592) file to your app folder
+ - Add your FCM keys to [HyperTrack dashboard](https://dashboard.hypertrack.com/settings)
 
-### 4. Firebase Realtime Database.
- - You can replace the logic with your sample apps.
+### 4. Set up Firebase Realtime Database
+ - You can replace the logic with your sample apps
  - Firebase Realtime Database is used for server communication only
  - Firebase Realtime Database is not required to use HyperTrack SDK
- - To setup Firebase Realtime database via Android studio,
- - Goto: Android Studio --> Tools --> Firebase --> Realtime Database
+ - To setup Firebase Realtime database via Android studio, go to: Android Studio --> Tools --> Firebase --> Realtime Database
 
 
 ## Release to PlayStore
