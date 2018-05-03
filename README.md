@@ -15,7 +15,8 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
       - Let customers share live trip with friends and family
       - Show trip summary with distance travelled
       
-[![Uber-for-X Driver App](https://img.youtube.com/vi/3R9GDQitt40/0.jpg)](https://www.youtube.com/watch?v=3R9GDQitt40)
+[![Uber-for-X Consumer App](https://img.youtube.com/vi/1qMFP5w32GY/0.jpg)](https://www.youtube.com/watch?v=1qMFP5w32GY)
+
 
 - **Uber-for-X Driver app** can be used by driver to :
      - Login/signup driver using Firebase phone-number authentication
@@ -24,8 +25,7 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
      - Track and navigate till customer's pickup location, and mark the pickup as complete
      - Track and navigate from customer's pickup to dropoff location, and mark the dropoff as complete
      - Show trip summary with distance travelled
-
-[![Uber-for-X Consumer App](https://img.youtube.com/vi/1qMFP5w32GY/0.jpg)](https://www.youtube.com/watch?v=1qMFP5w32GY)
+[![Uber-for-X Driver App](http://res.cloudinary.com/hypertrack/image/upload/v1525329669/driver.png)](https://www.youtube.com/watch?v=3R9GDQitt40)
 
 ## How to Begin
 
