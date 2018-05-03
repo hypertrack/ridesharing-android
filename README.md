@@ -58,6 +58,14 @@ The HyperTrack SDK requires FCM for a battery efficient real-time tracking exper
  - Setup Firebase Realtime Database via Android studio. Go to: Android Studio --> Tools --> Firebase --> Realtime Database
  - Note that Firebase Realtime Database is _not required_ to use HyperTrack SDK. You may have your own server that is connected to your apps
 
+### 5. Mock Tracking
+- To overview the tracking experience provided by HyperTrack SDK, feel free to use "createMockAction" instead of "createAction" in Driver app (StartRideActivity.java).
+
+- No changes are required to be made in Consumer app with respect to createMockAction/ mock tracking.
+
+- Enabling/ disabling of mock tracking is handled from where actions are created.
+
+- In these samples apps, Driver app creates action, which are tracked by Driver & Consumer apps.
 
 ## Release to PlayStore
 To release the apps on the Play Store, you will have to change the apps' package names.
