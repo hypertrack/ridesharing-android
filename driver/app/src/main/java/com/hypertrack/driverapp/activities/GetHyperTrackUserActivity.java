@@ -1,6 +1,5 @@
 package com.hypertrack.driverapp.activities;
 
-import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -286,8 +285,7 @@ public class GetHyperTrackUserActivity extends BaseActivity {
 
                 } else {
                     Log.d(Constants.TAG,"Driver saved successfully on Firebase");
-
-                    launchActivity(FindRideActivity.class);
+                    findNewTrip(null);
                 }
             }
         });

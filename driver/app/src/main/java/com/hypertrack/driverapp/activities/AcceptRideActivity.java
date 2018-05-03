@@ -73,7 +73,7 @@ public class AcceptRideActivity extends BaseActivity {
 
     @OnClick(R.id.bt_cancel)
     public void cancelClicked(View v) {
-        launchActivity(FindRideActivity.class);
+        findNewTrip(null);
     }
 
     @OnClick(R.id.bt_accept_ride)
@@ -92,7 +92,7 @@ public class AcceptRideActivity extends BaseActivity {
         Utils.showProgressDialog(mActivity, false);
 
         String driverId = SharedValues.getValue(mContext, Constants.DRIVER_ID);
-        Log.d(Constants.TAG,"FindRide:  driverId " +driverId);
+        Log.d(Constants.TAG,"AcceptRide:  driverId " +driverId);
 
         if(!TextUtils.isEmpty(driverId)) {
             final FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -173,7 +173,6 @@ public class AcceptRideActivity extends BaseActivity {
 
                 } else {
                     Log.d(Constants.TAG,"Trip data successfully updated on Firebase");
-
                     updateFirebaseDriver();
                 }
             }
@@ -216,8 +215,7 @@ public class AcceptRideActivity extends BaseActivity {
                         }
                     } else {
                         Log.d(Constants.TAG,"AcceptRide:  rideId " +rideId+"  is not available");
-                        SharedValues.saveValue(mContext, Constants.TRIP_ID, null);
-                        launchActivity(FindRideActivity.class);
+                        findNewTrip(null);
                     }
                 }
 
@@ -229,8 +227,7 @@ public class AcceptRideActivity extends BaseActivity {
                 }
             });
         } else {
-            showSnackBar("No trip available currently...try after sometime");
-            launchActivity(FindRideActivity.class);
+            findNewTrip("No trip available currently...try after sometime");
         }
     }
 

@@ -12,6 +12,7 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
@@ -111,7 +112,15 @@ public class BaseActivity extends AppCompatActivity {
         return false;
     }
 
-    protected void updateFirebase(String path, Object value) {
+    protected void findNewTrip(String message) {
+        if(!TextUtils.isEmpty(message)) {
+            showSnackBar(message);
+        }
+        SharedValues.resetTripValues(mContext);
+        launchActivity(FindRideActivity.class);
+    }
+
+    /*protected void updateFirebase(String path, Object value) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference(path);
         ref.setValue(value, new DatabaseReference.CompletionListener() {
@@ -123,7 +132,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void onFirebaseUpdated() {
-    }
+    }*/
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -59,7 +59,7 @@ public class SplashActivity extends BaseActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        launchActivity(FindRideActivity.class);
+                        findNewTrip(null);
                         finish();
                     }
                 }, SPLASH_TIME_OUT);
@@ -80,15 +80,13 @@ public class SplashActivity extends BaseActivity {
                 searchRide(rideId);
 
             } else {
-                showSnackBar("Error finding trip.");
-                SharedValues.resetTripValues(mContext);
-                launchActivity(FindRideActivity.class);
+                findNewTrip("Error finding any saved trip asssigned to driver.");
             }
         }
     }
 
     //Make query to check if this ride is not accepted by someone else
-    private void searchRide(String rideId) {
+    private void searchRide(final String rideId) {
         Utils.showProgressDialog(mActivity, false);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -101,17 +99,17 @@ public class SplashActivity extends BaseActivity {
                 Trip trip = dataSnapshot.getValue(Trip.class);
                 if(trip != null && trip.getStatus() == StatusEnum.trip_not_started) {
                     launchActivity(AcceptRideActivity.class);
+
                 } else {
-                    SharedValues.resetTripValues(mContext);
-                    launchActivity(FindRideActivity.class);
+                    //Trip seems to be assigned to some other Driver, so look for new Trip
+                    findNewTrip(null);
                 }
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.e(Constants.TAG, "onCancelled", databaseError.toException());
-                showSnackBar("Firebase Error finding Trip to Start : " + databaseError.getMessage());
-                Utils.hideProgressDialog();
+                findNewTrip("Error finding trip : " + rideId);
             }
         });
     }

@@ -1,7 +1,6 @@
 package com.hypertrack.driverapp.activities;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -277,7 +276,7 @@ public class StartRideActivity extends BaseActivity {
             mBaseView.setCTAButtonClickListener(new CTAButton.OnClickListener() {
                 @Override
                 public void onTitleButtonClick() {
-                    launchActivity(FindRideActivity.class);
+                    findNewTrip(null);
                 }
 
                 @Override
@@ -362,16 +361,13 @@ public class StartRideActivity extends BaseActivity {
                 }
             });
         } else {
-            showSnackBar(getString(R.string.no_ride_found));
-            SharedValues.resetTripValues(mContext);
-            launchActivity(FindRideActivity.class);
+            findNewTrip(getString(R.string.no_ride_found));
         }
     }
 
     private void showActionStatus() {
-        Log.e(Constants.TAG, "showActionStatus : mTripObject  " + mTripObject.getStatus());
-
         if (mTripObject != null) {
+            Log.e(Constants.TAG, "showActionStatus : mTripObject  " + mTripObject.getStatus());
 
             StatusEnum status = mTripObject.getStatus();
             switch (status) {
@@ -408,7 +404,7 @@ public class StartRideActivity extends BaseActivity {
                     break;
 
                 case trip_not_started:
-                    showSnackBar("Trip is not yet assigned");
+                    findNewTrip("Trip is not yet assigned");
                     break;
                 }
 
@@ -443,9 +439,10 @@ public class StartRideActivity extends BaseActivity {
                 .setCollectionId(mTripObject.getId())
                 .build();
 
-        //Replace createMockAction --> createAction for actually tracking
-        //Mock action provides way to test your tracking implementation
-        HyperTrack.createMockAction(actionParams, new HyperTrackCallback() {
+        //Replace createAction --> createMockAction for mocking tracking
+        //Mock action provides easy and convinient approach to test your tracking implementation
+        //Mock Tracking provide with contniuous location update from your source to destination
+        HyperTrack.createAction(actionParams, new HyperTrackCallback() {
             @Override
             public void onSuccess(@NonNull SuccessResponse response) {
                 Log.d(Constants.TAG, "createPickAction: onSuccess: " + response.getResponseObject());
@@ -519,9 +516,10 @@ public class StartRideActivity extends BaseActivity {
                 .setCollectionId(mTripObject.getHypertrack().getCollectionId())
                 .build();
 
-        //Replace createMockAction --> createAction for actually tracking
-        //Mock action provides way to test your tracking implementation
-        HyperTrack.createMockAction(actionParams, new HyperTrackCallback() {
+        //Replace createAction --> createMockAction for mocking tracking
+        //Mock action provides easy and convinient approach to test your tracking implementation
+        //Mock Tracking provide with contniuous location update from your source to destination
+        HyperTrack.createAction(actionParams, new HyperTrackCallback() {
             @Override
             public void onSuccess(@NonNull SuccessResponse response) {
                 Log.d(Constants.TAG, "createDropAction: onSuccess: " + response.getResponseObject());
@@ -581,7 +579,7 @@ public class StartRideActivity extends BaseActivity {
 
             @Override
             public void onError(@NonNull ErrorResponse errorResponse) {
-                Log.e(Constants.TAG, "createDropAction: onError: uniqueId:  " + uniqueId + "   " + errorResponse.getErrorCode() + "   " + errorResponse.getErrorMessage());
+                Log.e(Constants.TAG, "trackAction: onError: uniqueId:  " + uniqueId + "   " + errorResponse.getErrorCode() + "   " + errorResponse.getErrorMessage());
             }
         });
     }

@@ -270,7 +270,9 @@ public class TrackRideActivity extends BaseActivity {
 
                 mTripObject = dataSnapshot.getValue(Trip.class);
 
-                Log.d(Constants.TAG,"getRefreshedRide:   " +mTripObject.getStatus());
+                if(mTripObject != null) {
+                    Log.d(Constants.TAG, "getRefreshedRide:   " + mTripObject.getStatus());
+                }
 
                 if(mHyperTrackMapFragment == null) {
                     setUpHyperTrackBottomView();
@@ -347,7 +349,7 @@ public class TrackRideActivity extends BaseActivity {
 
             @Override
             public void onError(@NonNull ErrorResponse errorResponse) {
-                Log.e(Constants.TAG, "createDropAction: onError: uniqueId:  " + uniqueId + "   " + errorResponse.getErrorCode() + "   " + errorResponse.getErrorMessage());
+                Log.e(Constants.TAG, "trackAction: onError: uniqueId:  " + uniqueId + "   " + errorResponse.getErrorCode() + "   " + errorResponse.getErrorMessage());
             }
         });
     }
