@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hypertrack.driverapp">
+    package="com.hypertrack.uber_driver">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
 

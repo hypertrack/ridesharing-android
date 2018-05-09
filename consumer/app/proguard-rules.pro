@@ -39,10 +39,7 @@
 # This rule will properly ProGuard all the model classes in
 # the package com.yourcompany.models. Modify to fit the structure
 # of your app.
--keepclassmembers class com.hypertrack.uberx_consumer.models.** {
-  *;
-}
--keepclassmembers class com.hypertrack.uberx_consumer.near_by_search_api_models.** {
+-keepclassmembers class com.hypertrack.uber_consumer.models.** {
   *;
 }
 
