@@ -60,10 +60,14 @@ public class GenerateRideActivity extends BaseActivity {
     private int mNoOfCars = 0;
     private RequestQueue mRequestQueue = null;
 
+    private View mLoadingView = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_ride);
+
+        mLoadingView = findViewById(R.id.loading_view);
 
         getIntentData();
 
@@ -175,7 +179,7 @@ public class GenerateRideActivity extends BaseActivity {
     }
 
     private void showCurrentLocation() {
-        Utils.showProgressDialog(mActivity, false);
+        //Utils.showProgressDialog(mActivity, false);
 
         HyperTrack.getCurrentLocation(new HyperTrackCallback() {
             @Override
@@ -271,6 +275,7 @@ public class GenerateRideActivity extends BaseActivity {
                                     }
                                 }
 
+                                mLoadingView.setVisibility(View.GONE);
                                 if(mNoOfCars == 0) {
                                     showSnackBar(getString(R.string.no_cars_available), false);
                                 }
@@ -297,26 +302,28 @@ public class GenerateRideActivity extends BaseActivity {
     }
 
     private void showMarker(Location location, boolean isMyLocation) {
-        com.google.android.gms.maps.model.LatLng latLng = new com.google.android.gms.maps.model.LatLng(location.getLatitude(), location.getLongitude());
+        if(mHyperTrackMapFragment != null) {
+            com.google.android.gms.maps.model.LatLng latLng = new com.google.android.gms.maps.model.LatLng(location.getLatitude(), location.getLongitude());
 
-        int icon1 = R.drawable.fake_car;
-        if(isMyLocation) {
-            icon1 = R.drawable.icondrive;
+            int icon1 = R.drawable.fake_car;
+            if(isMyLocation) {
+                icon1 = R.drawable.icondrive;
 
-            String place = getAddressFromLocation(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
-            String noOfCars = mNoOfCars + " cars nearby";
+                String place = getAddressFromLocation(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
+                String noOfCars = mNoOfCars + " cars nearby";
 
-            View view = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.layout_info_box, null);
-            ((TextView) view.findViewById(R.id.tv_info_title)).setText(place);
-            ((TextView) view.findViewById(R.id.tv_info_details)).setText(noOfCars);
+                View view = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.layout_info_box, null);
+                ((TextView) view.findViewById(R.id.tv_info_title)).setText(place);
+                ((TextView) view.findViewById(R.id.tv_info_details)).setText(noOfCars);
 
-            MarkerModel markerModel = new MarkerModel(latLng, -1, MarkerModel.Type.CUSTOM_INFO);
-            markerModel.setView(view);
-            mHyperTrackMapFragment.addCustomMarker(markerModel);
+                MarkerModel markerModel = new MarkerModel(latLng, -1, MarkerModel.Type.CUSTOM_INFO);
+                markerModel.setView(view);
+                mHyperTrackMapFragment.addCustomMarker(markerModel);
+            }
+
+            MarkerModel pickUpMarker = new MarkerModel(latLng, icon1, MarkerModel.Type.CUSTOM);
+            mHyperTrackMapFragment.addOrUpdateMarker(pickUpMarker);
         }
-
-        MarkerModel pickUpMarker = new MarkerModel(latLng, icon1, MarkerModel.Type.CUSTOM);
-        mHyperTrackMapFragment.addOrUpdateMarker(pickUpMarker);
     }
 
     private String getAddressFromLocation(double latitude, double longitude) {

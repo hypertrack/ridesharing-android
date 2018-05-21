@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -15,7 +14,25 @@
             android:name="com.hypertrack.lib.tracking.MapProvider.HyperTrackMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
-            tools:layout="@layout/map_fragment" />
-    </LinearLayout>
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_repeat" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icondrive" />
+        </FrameLayout>
+    </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>
