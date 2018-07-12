@@ -4,7 +4,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.hypertrack.uber_driver"
+        applicationId "com.hypertrack.uber_consumer"
+
         minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
@@ -37,7 +38,6 @@ ext {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "com.android.support:appcompat-v7:$supportVersion"
 
     //Custom ProgressBar/ loader
     implementation 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
@@ -46,23 +46,42 @@ dependencies {
 
     //ButterKnife
     implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    implementation "com.android.support:appcompat-v7:$supportVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
 
     //Firbase auth for login
-    implementation 'com.firebaseui:firebase-ui-auth:3.3.0'
-    implementation "com.google.firebase:firebase-core:$playServicesVersion"
+    implementation 'com.firebaseui:firebase-ui-auth:4.0.0'
+    implementation "com.google.firebase:firebase-core:16.0.0"
+    implementation "com.google.firebase:firebase-auth:16.0.1"
 
     //Firebase Realtime database for getting Customer trips data : models.Trip
-    implementation "com.google.firebase:firebase-database:$playServicesVersion"
+    implementation "com.google.firebase:firebase-database:16.0.1"
+    implementation "com.google.firebase:firebase-firestore:17.0.1"
+    implementation "com.google.firebase:firebase-storage:16.0.1"
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
 
     //Fetch image
     implementation "com.github.bumptech.glide:glide:4.6.1"
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 
+    //Google Direction Api: Displaying route from source-destination
+    compile 'com.google.maps:google-maps-services:0.2.7'
+    compile 'org.slf4j:slf4j-nop:1.7.25'
+
     //HyperTrack: HyperTrack library
-    implementation('com.hypertrack:android:0.7.16@aar') {
-        transitive = true;
+    implementation('com.hypertrack:android:0.7.39@aar') {
+        transitive = true
+
+        exclude group: 'com.google.firebase', module: 'firebase-messaging'
+        exclude group: 'com.google.android.gms', module: 'play-services'
+        exclude group: 'com.android.support'
     }
+
+
 }
 
 //HyperTrack: FCM
