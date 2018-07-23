@@ -65,7 +65,7 @@ dependencies {
     compile 'org.slf4j:slf4j-nop:1.7.25'
 
     //HyperTrack: HyperTrack library
-    implementation('com.hypertrack:android:0.7.16@aar') {
+    implementation('com.hypertrack:android:0.7.39@aar') {
         transitive = true;
     }
 }
