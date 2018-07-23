@@ -60,7 +60,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
 
     //HyperTrack: HyperTrack library
-    implementation('com.hypertrack:android:0.7.16@aar') {
+    implementation('com.hypertrack:android:0.7.39@aar') {
         transitive = true;
     }
 }
