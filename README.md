@@ -40,7 +40,7 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
 ## How to Begin
 
 ### 1. Get your keys
- - [Signup](https://www.hypertrack.com/signup?utm_source=github&utm_campaign=uber_for_x_android) to get your [HyperTrack API keys](https://dashboard.hypertrack.com/settings)
+ - [Signup](https://dashboard.hypertrack.com/signup?utm_source=github&utm_campaign=uber_for_x_android) to get your [HyperTrack API keys](https://dashboard.hypertrack.com/settings)
  - Get the [Google Maps API key](https://developers.google.com/maps/documentation/android-api/signup)
 
 ### 2. Set up consumer & driver app
