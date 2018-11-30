@@ -1,6 +1,6 @@
 # Uber-for-X driver & customer apps using HyperTrack SDK
 
-**🛑WARNING: THIS OPEN SOURCE REPO ISN'T A WORKING REPO. WE ARE ACTIVELY WORKING TO UPDATE THIS REPO. WE EXPECTED TO GET IT BACK IN A WORKING STATE BY NOV 2018.**
+**🛑WARNING: THIS OPEN SOURCE REPO ISN'T A WORKING REPO. WE ARE ACTIVELY WORKING TO UPDATE THIS REPO. WE EXPECTED TO GET IT BACK IN A WORKING STATE BY JAN 2019.**
 
 Uber’s business model has given rise to a large number of Uber-for-X services. Among other things, X equals moving, parking, courier, groceries, flowers, alcohol, dog walks, massages, dry cleaning, vets, medicines, car washes, roadside assistance and marijuana. Through these on-demand platforms, supply and demand are aggregated online for services to be fulfilled offline.
 
