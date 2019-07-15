@@ -1,6 +1,8 @@
 # Uber-for-X driver & customer apps using HyperTrack SDK
 
-**🛑WARNING: THIS OPEN SOURCE REPO ISN'T A WORKING REPO. WE ARE ACTIVELY WORKING TO UPDATE THIS REPO. WE EXPECTED TO GET IT BACK IN A WORKING STATE BY JAN 2019.**
+**🛑WARNING: THIS SAMPLE APPLICATION IS DEPRECATED - IT ISN'T WORKING. WE'RE WORKING ON AN IMPROVED PLATFORM AND PLAN TO UPDATE THIS REPO AS SOON AS POSSIBLE.**
+
+[Please cast your vote](https://hypertrack.canny.io/feature-requests/p/update-sample-apps-to-new-v3-architecture) if you would like to use this sample app and we'll prioritize it accordingly.
 
 Uber’s business model has given rise to a large number of Uber-for-X services. Among other things, X equals moving, parking, courier, groceries, flowers, alcohol, dog walks, massages, dry cleaning, vets, medicines, car washes, roadside assistance and marijuana. Through these on-demand platforms, supply and demand are aggregated online for services to be fulfilled offline.
 
