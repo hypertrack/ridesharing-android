@@ -1,0 +1,133 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+
+        <item name="actionBarTheme">@style/ToolbarStyle</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="snackbarStyle">@style/SnackBarStyle</item>
+
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <item name="android:buttonStyle">@style/RobotoButtonStyle</item>
+
+        <item name="android:listDivider">@drawable/divider</item>
+
+        <item name="hyperTrackMapStyle">@style/HyperTrackMap</item>
+    </style>
+
+    <style name="HyperTrackMap">
+        <item name="myLocationIcon">@drawable/icon_drive_base_transparent</item>
+        <item name="myLocationBearingIcon">@drawable/icondrive</item>
+        <item name="tripDestinationIcon">@drawable/ic_destination_marker</item>
+        <item name="tripRouteColor">@color/black</item>
+        <item name="tripCompletedOriginIcon">@drawable/ic_source_marker</item>
+        <item name="tripCompletedDestinationIcon">@drawable/ic_destination_marker</item>
+        <item name="tripCompletedRouteColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:colorBackground">@null</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="LoaderDialog" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+
+    <!-- snackbar style -->
+    <style name="SnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="RoleDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ActionButton">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_text</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="CancelButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/bg_button_black</item>
+        <item name="android:drawableStart">@drawable/icn_titlebar_close</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:text">@string/cancel</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hypertrack.ridesharing.views.SnackbarContentLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="54dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="54dp"
+            android:background="@drawable/bg_snackbar_header"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:text="@string/finding_riders_near_you"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_snackbar"
+            android:elevation="10dp"
+            android:padding="@dimen/content_padding">
+
+            <include layout="@layout/user_info" />
+
+        </FrameLayout>
+    </LinearLayout>
+</com.hypertrack.ridesharing.views.SnackbarContentLayout>

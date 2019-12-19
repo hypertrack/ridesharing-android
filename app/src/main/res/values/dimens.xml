@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="content_padding">16dp</dimen>
+    <dimen name="map_padding">100dp</dimen>
+    <dimen name="snackbar_height">220dp</dimen>
+    <dimen name="dialog_accept_top_height">250dp</dimen>
+    <dimen name="dialog_accept_navigation_height">250dp</dimen>
+    <dimen name="elevation">4dp</dimen>
+    <dimen name="map_route_width">4dp</dimen>
+</resources>

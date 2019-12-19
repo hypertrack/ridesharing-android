@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hypertrack.ridesharing.views.SnackbarContentLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/get_directions"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="54dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="54dp"
+            android:background="@drawable/bg_snackbar_header"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:drawableStart="@drawable/directions_icon"
+                android:drawablePadding="6dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="@string/get_directions"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_snackbar"
+            android:elevation="10dp"
+            android:padding="@dimen/content_padding">
+
+            <TextView
+                android:id="@+id/destination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="2"
+                android:padding="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/cancel"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="PICKUP: Sdhshsf df.df dfmjjsdfisdk f,df s.dmf, djfhskjdfh" />
+
+            <FrameLayout
+                android:id="@+id/user_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/call"
+                app:layout_constraintTop_toBottomOf="@id/destination">
+
+                <include layout="@layout/user_info" />
+
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/cancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_button_black"
+                android:src="@drawable/icn_titlebar_close"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="8dp"
+                android:ellipsize="end"
+                android:text="@string/call"
+                android:textAllCaps="true"
+                android:textColor="#02c94b"
+                app:layout_constraintBottom_toBottomOf="@id/user_info"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/user_info" />
+
+            <Button
+                android:id="@+id/start_trip"
+                style="@style/ActionButton"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/right_arrow"
+                android:gravity="start|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/start_trip"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_info" />
+
+            <Button
+                android:id="@+id/end_trip"
+                style="@style/ActionButton"
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button_red"
+                android:drawableEnd="@drawable/right_arrow"
+                android:gravity="start|center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/end_trip"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_info" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</com.hypertrack.ridesharing.views.SnackbarContentLayout>

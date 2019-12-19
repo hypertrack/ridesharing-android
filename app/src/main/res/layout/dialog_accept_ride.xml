@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_ridehole" />
+
+    <Button
+        android:id="@+id/cancel"
+        style="@style/CancelButton"
+        android:layout_margin="@dimen/content_padding"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_popup"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/ht_action"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:targetApi="lollipop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/content_padding">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pickup"
+                android:textAllCaps="true"
+                android:textColor="#abb4be" />
+
+            <TextView
+                android:id="@+id/pickup_address"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="2"
+                tools:text="lollipop lollipoplol lipop lollipop lollipoplol lipop lollipop lollipoplol lipop " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_popup_bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/content_padding">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/profile_avatar" />
+
+            <TextView
+                android:id="@+id/rider_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                tools:text="lollipop lollipoplol" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@id/ht_action"
+        style="@style/ActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="32dp"
+        android:drawableEnd="@drawable/right_arrow"
+        android:gravity="start|center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/accept_ride"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

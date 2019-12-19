@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hypertrack.ridesharing.views.SnackbarContentLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/bg_snackbar"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="35dp"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/where_do_you_wanna_go"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dropoff"
+            style="@style/TextView"
+            android:layout_marginTop="20dp"
+            android:hint="@string/enter_dropoff" />
+
+    </LinearLayout>
+</com.hypertrack.ridesharing.views.SnackbarContentLayout>

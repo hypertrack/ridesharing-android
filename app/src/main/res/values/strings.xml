@@ -1,0 +1,46 @@
+<resources>
+    <string name="login">LOGIN</string>
+    <string name="uber_for_x">Uber for X</string>
+    <string name="hypertrack">HyperTrack</string>
+    <string name="driver">Driver</string>
+    <string name="are_you">Are you?</string>
+    <string name="rider">Rider</string>
+    <string name="enter_you_name">Enter your name</string>
+    <string name="enter_you_phone">Enter your phone</string>
+    <string name="enter_car_model">car model</string>
+    <string name="enter_driver_licence">driver licence</string>
+    <string name="pickup">Pickup</string>
+    <string name="dropoff">Dropoff</string>
+    <string name="save">Save</string>
+    <string name="enter_pickup">Enter pickup location</string>
+    <string name="enter_dropoff">Enter your destination</string>
+    <string name="book_ride">Book ride</string>
+    <string name="choose_origin_and_destination">Choose origin and destination</string>
+    <string name="open">Open</string>
+    <string name="app_settings">App settings</string>
+    <string name="you_can_allow">You can allow HyperTrack Live to access this device\'s location in settings</string>
+    <string name="my_location">My location</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept_ride">Accept ride</string>
+    <string name="call">Call</string>
+    <string name="finding_drivers">Connecting you to the nearest driver</string>
+    <string name="order_was_cancelled">Order was cancelled</string>
+    <string name="start_trip">Start trip</string>
+    <string name="end_trip">End trip</string>
+    <string name="address_pickup"><![CDATA[<font color=#b7b7b7>PICKUP</font> %s]]></string>
+    <string name="address_dropoff"><![CDATA[<font color=#b7b7b7>DROPOFF</font> %s]]></string>
+    <string name="distance">distance</string>
+    <string name="ride_time">Ride time</string>
+    <string name="stopped">Stopped</string>
+    <string name="driving">Driving</string>
+    <string name="miles">%.2f Miles</string>
+    <string name="mins">%d mins</string>
+    <string name="where_do_you_wanna_go">Where do you wanna go ?</string>
+    <string name="estimate">Estimate…</string>
+    <string name="cancel_ride">Cancel ride?</string>
+    <string name="finding_riders_near_you">Finding riders near you</string>
+    <string name="get_directions">Get directions</string>
+    <string name="find_new_rides">Find new rides</string>
+    <string name="book_another_ride">Book another ride</string>
+    <string name="fare">Fare | $%d</string>
+</resources>

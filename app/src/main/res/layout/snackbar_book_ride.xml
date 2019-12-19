@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hypertrack.ridesharing.views.SnackbarContentLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/bg_snackbar"
+        android:elevation="10dp"
+        android:padding="16dp"
+        tools:targetApi="lollipop">
+
+        <LinearLayout
+            android:id="@+id/pickup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_text"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_text_left"
+                android:gravity="center"
+                android:text="@string/pickup"
+                android:textAllCaps="true"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/pickup_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_pickup"
+                android:lines="2"
+                android:textColor="#47556c" />
+
+            <ImageView
+                android:id="@+id/my_location"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_location" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="47dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@id/dropoff"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pickup" />
+
+        <LinearLayout
+            android:id="@+id/dropoff"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_text"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pickup">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_text_left"
+                android:gravity="center"
+                android:text="@string/dropoff"
+                android:textAllCaps="true"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/dropoff_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="@string/enter_dropoff"
+                android:lines="2"
+                android:textColor="#47556c" />
+        </LinearLayout>
+
+        <Button
+            android:id="@id/ht_action"
+            style="@style/ActionButton"
+            android:layout_marginTop="16dp"
+            android:drawableEnd="@drawable/right_arrow"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/book_ride"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dropoff" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.hypertrack.ridesharing.views.SnackbarContentLayout>
