@@ -61,9 +61,9 @@ $ cd ridesharing-android
 ```
 
 ### 3. Set up Firebase
- - Create a Firebase project. For detail steps refer to _Step 1_: https://firebase.google.com/docs/ios/setup#create-firebase-project
- - Register Driver app with `com.hypertrack.ridesharing.driver.android.github` bundle ID and Rider app with `com.hypertrack.ridesharing.rider.android.github` bundle ID. More details in _Step 2_: https://firebase.google.com/docs/ios/setup#register-app
- - Move Driver app's `GoogleService-Info.plist` to the Driver app target and Rider's to Riders. Described in _Step 3_: https://firebase.google.com/docs/ios/setup#add-config-file No need to follow Step 4 and 5, they are already implemented in the app.
+ - Create a Firebase project. For detail steps refer to _Step 1_: https://firebase.google.com/docs/android/setup#create-firebase-project
+ - Register Driver app with `com.hypertrack.ridesharing.driver.android.github` bundle ID and Rider app with `com.hypertrack.ridesharing.rider.android.github` bundle ID. More details in _Step 2_: https://firebase.google.com/docs/android/setup#register-app
+ - Move Driver app's `GoogleService-Info.plist` to the Driver app target and Rider's to Riders. Described in _Step 3_: https://firebase.google.com/docs/android/setup#add-config-file No need to follow Step 4 and 5, they are already implemented in the app.
  - Create Cloud Firestore database in test mode by following the "Create a Cloud Firestore database" section from this guide https://firebase.google.com/docs/firestore/quickstart#create No need to foolow other steps, they are already implemented in the app.
  - Follow instructions in our [firebase repo](https://github.com/hypertrack/ridesharing-firebase) to setup Firebase Cloud Functions that act as a backend, interacting with HyperTrack APIs.
  - Note that Firebase Cloud Firestore and Cloud Functions are _not required_ to use HyperTrack SDKs. You may have your own server that is connected to your apps.
