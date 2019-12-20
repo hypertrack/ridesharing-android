@@ -77,7 +77,7 @@ dependencies {
 
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
 
-    implementation 'com.hypertrack:hypertrack:3.6.0'
+    implementation 'com.hypertrack:hypertrack:3.7.0'
     implementation 'com.hypertrack:hypertrack-views:0.6.0'
     implementation 'com.hypertrack:maps-google:0.1.1'
 

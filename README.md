@@ -59,6 +59,8 @@ $ cd ridesharing-android
     android:name="com.hypertrack.sdk.PUB_KEY"
     android:value="YOUR_PUBLISHABLE_KEY_HERE" />
 ```
+- Add `google-services.json`(download file from [firebase](https://console.firebase.google.com) Yor-project -> Project settings) to ridesharing-android/app
+- Change the driver or rider [build variant](https://developer.android.com/studio/run#changing-variant) to build different apps.
 
 ### 3. Set up Firebase
  - Create a Firebase project. For detail steps refer to _Step 1_: https://firebase.google.com/docs/android/setup#create-firebase-project
