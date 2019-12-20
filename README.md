@@ -53,7 +53,7 @@ $ git clone https://github.com/hypertrack/ridesharing-android.git
 $ cd ridesharing-android
 ```
 
-- Add your publishable key in `app/src/main/AndroidManifest.xml` for `android:value` key
+- Add your publishable key in [`app/src/main/AndroidManifest.xml`](https://github.com/hypertrack/ridesharing-android/blob/0e83a02f5f01931f10b278cd7303d18dec948a69/app/src/main/AndroidManifest.xml#L41) for `android:value` key
 ```
 <meta-data
     android:name="com.hypertrack.sdk.PUB_KEY"
