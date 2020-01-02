@@ -1,5 +1,7 @@
 # Ridesharing driver & rider apps using HyperTrack SDK
 
+<p align="center">👉 <a href="https://github.com/hypertrack/ridesharing-ios">Looking for the iOS version?</a></p>
+
 <p align="center">
   <img src="Images/Demo.gif" alt="Apps demo"/>
 </p>
