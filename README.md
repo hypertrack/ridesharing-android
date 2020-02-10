@@ -40,7 +40,7 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
  </a>
 </p>
 
-
+## How to Begin
 ## How to Begin
 
 ### 1. Get your keys
@@ -99,16 +99,16 @@ For detailed documentation of the APIs, customizations and what all you can buil
 3. Rider sign-ups with his data. This creates a new document with rider's data in users collection in Cloud Firestore
 4. Rider chooses pickup and dropoff places, which creates a new order in orders collection in Cloud Firestore
 5. The driver is accepting this order, changing its status to `ACCEPTED` and setting his data in the order
-6.  This change triggers `updateOrderStatus` Firebase Cloud Function. The function creates a trip from the driver's current position to the rider's pickup point using HyperTrack API. Then it changes the order status to `PICKING_UP`.
+6.  This change triggers `updateOrderStatus` Firebase Cloud Function. The function creates a trip from the driver's current position to the rider's pickup point using [HyperTrack API](https://docs.hypertrack.com/#guides-apis-usage-trips). Then it changes the order status to `PICKING_UP`.
 7. Driver and Rider apps are subscribed to their order. When they see that the status is `PICKING_UP`, they use HyperTrackViews SDK to display the trip from the order on a map.
 8. When a driver crosses destination geofence of the rider's pickup point, a webhook from HyperTrack to Firebase Cloud Function is triggered. This function updates the order to `REACHED_PICKUP` state.
 9. Upon receiving `REACHED_PICKUP` order state, the Driver app shows a "Start Trip" button. When the driver presses it, Driver app changes the order status to `STARTED_RIDE` state
-10. Upon receiving the `STARTED_RIDE` state, Firebase Cloud Function call HyperTrack APIs to complete the previous trip and create a new trip to the rider's destination. After the trip is created, the function updates the order status to `DROPPING_OFF`.
+10. Upon receiving the `STARTED_RIDE` state, Firebase Cloud Function call [HyperTrack APIs](https://docs.hypertrack.com/#guides-apis-usage-trips) to complete the previous trip and create a new trip to the rider's destination. After the trip is created, the function updates the order status to `DROPPING_OFF`.
 11. When Driver and Rider apps see the `PICKING_UP` status, they use HyperTrackViews SDK to display the new trip on a map.
 12. When a driver crosses destination geofence of the rider's dropoff point, a webhook from HyperTrack to Firebase Cloud Function triggers again. This function updates the order to `REACHED_DROPOFF` state.
 13. Upon receiving `REACHED_DROPOFF` order state, the Driver app shows a "End Trip" button. When the driver presses it, Driver app changes the order status to `COMPLETED` state.
 14. Firebase Cloud Function completes the dropoff trip at this point.
-15. When this trip is completed, Rider and Driver app show trip summary using HyperTrackViews SDK.
+15. When this trip is completed, Rider and Driver app show trip summary using HyperTrack Views SDK.
 
 </details>
 
