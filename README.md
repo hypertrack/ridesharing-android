@@ -41,7 +41,6 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
 </p>
 
 ## How to Begin
-## How to Begin
 
 ### 1. Get your keys
  - [Signup](https://dashboard.hypertrack.com/signup) to get your [HyperTrack Publishable Key](https://dashboard.hypertrack.com/setup)
