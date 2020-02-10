@@ -86,7 +86,7 @@ For detailed documentation of the APIs, customizations and what all you can buil
 1. The driver app uses HyperTrack SDK ([iOS](https://github.com/hypertrack/quickstart-ios)/[Android](https://github.com/hypertrack/quickstart-android)) to send his location, name, and metadata to HyperTrack's servers.
 2. Driver and Rider apps use HyperTrack Views ([iOS](https://github.com/hypertrack/views-ios)/[Android](https://github.com/hypertrack/views-android)) to show the driver's current location and trip's route.
 3. Driver and Rider apps are subscribed to [Firebase Cloud Firestore](https://firebase.google.com/docs/firestore) to sync users and orders between them.
-4. Firebase Cloud Functions react to the order status field in Cloud Firestore, create and complete trips using [HyperTrack APIs](https://docs.hypertrack.com/#guides-apis-usage-trips), listen to [HyperTrack Webhooks](https://docs.hypertrack.com/#guides-webhooks) and update the order status and trip fields with new results.
+4. Firebase Cloud Functions react to the order status field in Cloud Firestore, create and complete trips using [HyperTrack Trips APIs](https://docs.hypertrack.com/#guides-apis-usage-trips), listen to [HyperTrack Webhooks](https://docs.hypertrack.com/#guides-webhooks) and update the order status and trip fields with new results.
 
 <details>
     <summary>Step by step process of communication:</summary>
@@ -174,7 +174,11 @@ FirebaseFirestoreApi.createUser(user)
 
 In HyperTrackViews SDK snippets, both Driver and Rider apps are using this ID to display driver on a map.
 
-## How Ridesharing sample apps use HyperTrackViews SDK
+## How Ridesharing sample apps use HyperTrack API
+
+Ridesharing apps use [HyperTrack Trips API](https://docs.hypertrack.com/#guides-apis-usage-trips) to create and complete trips. 
+
+## How Ridesharing sample apps use HyperTrack Views SDK
 
 Both Rider and Driver apps use [HyperTrackViews SDK](https://github.com/hypertrack/views-android) to display realtime location and trip updates on a map.
 
