@@ -92,6 +92,7 @@ For detailed documentation of the APIs, customizations and what all you can buil
 <details>
     <summary>Step by step process of communication:</summary>
 
+
 1. Driver sign-ups with his data. This
     1. Creates a new document with driver's data in users collection in Cloud Firestore
     2. Adds the name and metadata through HyperTrack SDK for the driver. HyperTrack SDK starts tracking the driver's location. From this point, the driver can be seen in HyperTrack Dashboard
