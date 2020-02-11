@@ -92,7 +92,7 @@ You can find the SDK documentation [here](https://github.com/hypertrack/quicksta
 
 Driver app integrates HyperTrack SDK with push notifictions to:
 - Start tracking location immediately when Firebase creates a trip for accepted order
-- Stop tracking location when app is backgrounded and there are no trips lift
+- Stop tracking location when app is backgrounded and there are no trips left
 
 ### SDK Initialization
 
