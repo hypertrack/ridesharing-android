@@ -114,9 +114,9 @@ For detailed documentation of the APIs, customizations and what all you can buil
 
 ## How Ridesharing sample apps use HyperTrack API
 
-Ridesharing apps use [HyperTrack Trips API](https://docs.hypertrack.com/#guides-apis-usage-trips) to create and complete trips. 
+Ridesharing apps use [HyperTrack Trips API](https://docs.hypertrack.com/#guides-apis-usage-trips) to [create](https://docs.hypertrack.com/#references-apis-trips-post-trips) and [complete](https://docs.hypertrack.com/#references-apis-trips-post-trips-trip_id-complete) trips by using Firebase Cloud Functions. Firebase allows ridesharing sample appilcations integrate with HyperTrack Trips API via backend server integration.
 
-For each rider's request that is accepted by the driver, a trip is created for the driver to pick up the rider at the rider's location. Once the pick up is completed, the trip is completed and then the new trip is created for the driver to get the rider to rider's destination. Once the rider reaches the destination and is dropped off, the trip is completed.
+For each rider's request that is accepted by the driver, a trip is [created](https://docs.hypertrack.com/#references-apis-trips-post-trips) for the driver to pick up the rider at the rider's location. Once the pick up is completed, the trip is [completed](https://docs.hypertrack.com/#references-apis-trips-post-trips-trip_id-complete) and then the new trip is [created](https://docs.hypertrack.com/#references-apis-trips-post-trips) for the driver to get the rider to rider's destination. Once the rider reaches the destination and is dropped off, the trip is [completed](https://docs.hypertrack.com/#references-apis-trips-post-trips-trip_id-complete).
 
 ## How Ridesharing sample apps use HyperTrack SDK
 
