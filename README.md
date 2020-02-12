@@ -51,9 +51,8 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
 ![Architecture](Images/ArchitectureUpdated.png)
 
 <details>
-  
     <summary>Step by step process of communication:</summary>
-
+  
 1. Driver sign-ups with his data. This
     1. Creates a new document with driver's data in users collection in Cloud Firestore
     2. Adds the name and metadata through HyperTrack SDK for the driver. HyperTrack SDK starts tracking the driver's location. From this point, the driver can be seen in HyperTrack Dashboard
@@ -71,7 +70,6 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
 13. Upon receiving `REACHED_DROPOFF` order state, the Driver app shows a "End Trip" button. When the driver presses it, Driver app changes the order status to `COMPLETED` state.
 14. Firebase Cloud Function completes the dropoff trip at this point.
 15. When this trip is completed, Rider and Driver app show trip summary using HyperTrack Views SDK.
-
 </details>
 
 ## How Ridesharing sample apps use HyperTrack API
