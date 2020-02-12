@@ -42,7 +42,7 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
 
 ## Architecture
 
-![Architecture](Images/Architecture.png)
+![Architecture](Images/ArchitectureUpdated.png)
 
 1. The driver app uses HyperTrack SDK ([iOS](https://github.com/hypertrack/quickstart-ios)/[Android](https://github.com/hypertrack/quickstart-android)) to send his location, name, and metadata to HyperTrack's servers.
 2. Driver and Rider apps use HyperTrack Views ([iOS](https://github.com/hypertrack/views-ios)/[Android](https://github.com/hypertrack/views-android)) to show the driver's current location and trip's route.
