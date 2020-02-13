@@ -54,32 +54,32 @@ This open source repo/s uses HyperTrack SDK for developing real world Uber-like 
     <summary>Step by step process of communication:</summary>
 
 1. **Request pickup at location X for a ride to location Y**
-   - Prior to requesting a pickup, the Rider App has already signed up with Ride Sharing App Backend. Ride Sharing App Backend created a new document with rider's data in the users collection
-   - Rider chooses pickup and dropoff places, which creates a new order in orders collection in Cloud Firestore
+   - Prior to requesting a pickup, Rider App has already signed up with Ride Sharing App Backend. Ride Sharing App Backend created a new document with the rider's data in its users collection
+   - The rider chooses pickup and dropoff places. Rider App sends a request to Ride Sharing App Backend, which creates a new order in its orders collection in Cloud Firestore
 2. **Assign ride to location X to driver**
-   - Prior to the assignment, Driver App already signed up with Ridesharing App Backend:
-     - Ride Sharing App Backend created a new document with driver's data in users collection in Cloud Firestore
-     - Driver App added name and metadata through HyperTrack SDK 
+   - Prior to the assignment, Driver App already signed up with Ride Sharing App Backend:
+     - Ride Sharing App Backend created a new document with the driver's data in its users collection in Cloud Firestore
+     - Driver App added name and metadata through HyperTrack SDK
      - HyperTrack SDK started tracking the driver's location  
-     - From this point, the driver can be seen in the HyperTrack Dashboard
+     - From this point, the driver can be seen in HyperTrack Dashboard
 3. **Driver accepts ride to location X**
-   - Driver App is checking with Ridesharing App Backend periodically, looking for orders with the `NEW` status
+   - Driver App is checking with Ride Sharing App Backend periodically, looking for orders with the `NEW` status
    - Once the new order(s) show up, the driver can accept a chosen order. Ride Sharing Backend changes the order status to `ACCEPTED` and sets the driver's data in the order 
 4. **Create trip with destination X via Trips API**
-   - Once the order status is changed, it triggers `updateOrderStatus` Firebase Cloud Function inside Ride Sharing Backend. The function creates a trip from the driver's current position to the rider's pickup point using [HyperTrack API](https://docs.hypertrack.com/#guides-apis-usage-trips). Then it changes the order status to `PICKING_UP`.
+   - Once the order status is changed, Ride Sharing Backend triggers `updateOrderStatus` Firebase Cloud Function. The function creates a trip from the driver's current position to the rider's pickup point using [HyperTrack API](https://docs.hypertrack.com/#guides-apis-usage-trips). Once the troop is created, the order status is changed to `PICKING_UP`.
 5. **Rider tracks driver with ETA to location**
-   - Driver and Rider apps are subscribed to their order. When they see that the status is `PICKING_UP`, they use HyperTrackViews SDK to display the trip from the order on a map
+   - Driver and Rider Apps are subscribed to their order. When they see that the status is `PICKING_UP`, they use HyperTrackViews SDK to display the trip live from the order on a map
 6. **Driver picks up rider at location X**
-   - When a driver crosses destination geofence of the rider's pickup point, a webhook from HyperTrack to Firebase Cloud Function is triggered. This function updates the order to `REACHED_PICKUP` state
+   - When the driver crosses destination geofence of the rider's pickup point, a webhook from HyperTrack to Ride Sharing App Backend's Firebase Cloud Function is triggered. This function updates the order to `REACHED_PICKUP` state
 7. **Complete trip with destination X and create trip with destination Y via Trips API**
-   - Upon receiving `REACHED_PICKUP` order state, the Driver app shows a "Start Trip" button. When the driver presses it, Driver app changes the order status to `STARTED_RIDE` state
-   - Upon receiving the `STARTED_RIDE` state, Firebase Cloud Function call [HyperTrack APIs](https://docs.hypertrack.com/#guides-apis-usage-trips) to complete the previous trip and create a new trip to the rider's destination. After the trip is created, the function updates the order status to `DROPPING_OFF`
-   - When Driver and Rider apps see the `PICKING_UP` status, they use HyperTrackViews SDK to display the new trip on a map
+   - Upon receiving `REACHED_PICKUP` order state, Driver App shows a "Start Trip" button. When the driver presses it, Driver App changes the order status to `STARTED_RIDE` state
+   - Upon receiving the `STARTED_RIDE` state, Ride Sharing App Backend's Firebase Cloud Function calls [HyperTrack APIs](https://docs.hypertrack.com/#guides-apis-usage-trips) to complete the previous trip and creates a new trip to the rider's destination. After the trip is created, the function updates the order status to `DROPPING_OFF`
+   - When Driver and Rider Apps see `PICKING_UP` status, they both use HyperTrack Views SDK to display the new trip on a map
 8. **Driver drops off rider at Location Y**
-   - When a driver crosses destination geofence of the rider's dropoff point, a webhook from HyperTrack to Firebase Cloud Function triggers again. This function updates the order to `REACHED_DROPOFF` state
-   - Firebase Cloud Function proceeds to complete the dropoff trip in the next step below
-9. **Complete trip  with  destination Y via Trips API**
+   - When the driver crosses the destination geofence of the rider's dropoff point, a webhook from HyperTrack to Ride Sharing App Backend's Firebase Cloud Function triggers again. This function updates the order to `REACHED_DROPOFF` state
    - Upon receiving `REACHED_DROPOFF` order state, the Driver app shows a "End Trip" button. When the driver presses it, Driver app changes the order status to `COMPLETED` state
+9. **Complete trip  with  destination Y via Trips API**
+   - Ride Sharing App Backend's Firebase Cloud Function proceeds to call [HyperTrack APIs](https://docs.hypertrack.com/#guides-apis-usage-trips) complete the dropoff trip 
    - When this trip is completed, Rider and Driver Apps show trip summary using HyperTrack Views SDK
 </details>
 
