@@ -60,9 +60,8 @@ public class TrackingPresenter implements TrackingStateObserver.OnTrackingStateC
     }
 
     public void adjustTrackingState() {
-        if (isGpsProviderEnabled(mContext)) {
-            hyperTrack.syncDeviceSettings();
-        } else {
+        hyperTrack.syncDeviceSettings();
+        if (!isGpsProviderEnabled(mContext)) {
             actionLocationSourceSettings();
         }
     }

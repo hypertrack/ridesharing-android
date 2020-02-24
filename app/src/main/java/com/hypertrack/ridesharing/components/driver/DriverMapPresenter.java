@@ -93,7 +93,6 @@ public class DriverMapPresenter extends MapPresenter<DriverMapPresenter.DriverVi
     @Override
     protected void onOrderChanged() {
         super.onOrderChanged();
-        trackingPresenter.adjustTrackingState();
 
         if (mState.getOrder() != null) {
 
