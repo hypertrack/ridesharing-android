@@ -61,7 +61,6 @@ public class DriverMapPresenter extends MapPresenter<DriverMapPresenter.DriverVi
         mapCenterOffset = (int) ((paddingBottom - paddingTop) / 2);
 
         trackingPresenter = new TrackingPresenter(context, view);
-        trackingPresenter.performTracking();
     }
 
     @Override
@@ -175,6 +174,7 @@ public class DriverMapPresenter extends MapPresenter<DriverMapPresenter.DriverVi
                             mState.updateOrder(mState.selectedOrder);
                             subscribeOrderUpdates();
                             Log.d(TAG, "DocumentSnapshot successfully updated!");
+                            trackingPresenter.adjustTrackingState();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -199,6 +199,7 @@ public class DriverMapPresenter extends MapPresenter<DriverMapPresenter.DriverVi
                         public void onSuccess(Void aVoid) {
                             mView.hideProgressBar();
                             Log.d(TAG, "DocumentSnapshot successfully updated!");
+                            trackingPresenter.adjustTrackingState();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -223,6 +224,7 @@ public class DriverMapPresenter extends MapPresenter<DriverMapPresenter.DriverVi
                         public void onSuccess(Void aVoid) {
                             mView.hideProgressBar();
                             Log.d(TAG, "DocumentSnapshot successfully updated!");
+                            trackingPresenter.adjustTrackingState();
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
