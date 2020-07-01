@@ -248,6 +248,7 @@ public class DriverMapPresenter extends MapPresenter<DriverMapPresenter.DriverVi
                         + mState.getOrder().dropoff.latitude + "," + mState.getOrder().dropoff.longitude);
             }
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+            mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             mapIntent.setPackage("com.google.android.apps.maps");
             mContext.startActivity(mapIntent);
         }
