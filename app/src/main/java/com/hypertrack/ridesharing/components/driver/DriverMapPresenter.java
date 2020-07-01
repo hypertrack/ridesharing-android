@@ -17,7 +17,6 @@ import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -319,21 +318,6 @@ public class DriverMapPresenter extends MapPresenter<DriverMapPresenter.DriverVi
                 }
             }
             mView.updateNotifications(newOrders);
-        }
-    }
-
-    private void updateMapCamera() {
-        if (!mState.newOrders.isEmpty()) {
-            LatLngBounds.Builder builder = new LatLngBounds.Builder();
-            if (mState.currentLocation != null) {
-                builder.include(
-                        new LatLng(mState.currentLocation.getLatitude(), mState.currentLocation.getLongitude())
-                );
-            }
-            for (Order order : mState.newOrders.values()) {
-                builder.include(order.pickup.getLatLng());
-            }
-            animateCamera(builder.build());
         }
     }
 
