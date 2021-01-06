@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Keep model classes to preserve the field names consistency across versions
+-keep class com.hypertrack.ridesharing.models.** { *; }
